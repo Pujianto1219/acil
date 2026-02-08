@@ -15,9 +15,9 @@ mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/acilshop/acil/main/bot/kyt.zip
-unzip kyt.zip
-pip3 install -r kyt/requirements.txt
+wget https://raw.githubusercontent.com/Pujianto1219/acil/main/bot/bot.zip
+unzip bot.zip
+pip3 install -r bot/requirements.txt
 
 clear
 echo ""
@@ -37,25 +37,25 @@ echo -e PUB='"'$PUB'"' >> /usr/bin/kyt/var.txt
 echo -e HOST='"'$NS'"' >> /usr/bin/kyt/var.txt
 clear
 
-cat > /etc/systemd/system/kyt.service << END
+cat > /etc/systemd/system/bot.service << END
 [Unit]
-Description=Simple kyt - @kyt
+Description=Simple bot - @bot
 After=network.target
 
 [Service]
 WorkingDirectory=/usr/bin
-ExecStart=/usr/bin/python3 -m kyt
+ExecStart=/usr/bin/python3 -m bot
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 END
 
-systemctl start kyt 
-systemctl enable kyt
-systemctl restart kyt
+systemctl start bot 
+systemctl enable bot
+systemctl restart bot
 cd /root
-rm -rf kyt.sh
+rm -rf bot.sh
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
