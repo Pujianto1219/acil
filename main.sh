@@ -306,7 +306,7 @@ sts="${Error}"
 fi
 TIMES="10"
 CHATID="6355497501"
-KEY="8194078306:AAHoQWgRND5kpFjcW25SsSK4_pUhFzhJ0Bg"
+KEY="7958219161:AAE-qCrUNC8CDzltezAl8kgSahxe16iW6K4"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /root/.isp)
 CITY=$(cat /root/.city)
